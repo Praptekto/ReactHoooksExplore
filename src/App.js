@@ -1,13 +1,26 @@
 // import logo from './logo.svg';
 // import './App.css';
+import React, { useState } from 'react'
+import FunctionalContext from './FunctionalContext';
+
+
+export const ThemeContext = React.createContext();
+
 
 function App() {
+  const [dark, setdark] = useState(false)
+
+  const ToggleButton=(e)=>{
+    e.preventDefault();
+    setdark((dark)=>!dark)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        tes
-      </header>
-    </div>
+    <ThemeContext.Provider value={dark}>
+      <button onClick={ToggleButton}>Toggle</button>
+
+      <FunctionalContext/>
+      
+    </ThemeContext.Provider>
   );
 }
 
