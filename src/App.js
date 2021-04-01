@@ -45,8 +45,6 @@ function reducer(todos, action){
 }
 
 
-
-
 function newTodo(name){
   const id = Date.now() + Math.floor(Math.random() * 100000);
  
