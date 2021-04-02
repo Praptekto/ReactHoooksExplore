@@ -19,8 +19,7 @@ function reducer(todos, action){
         
       })
       return tes;
-
-      break;
+      
     case 'Delete':
       // Something
       todos?.map((todo, index, todos)=>{
